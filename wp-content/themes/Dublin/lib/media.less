@@ -1,0 +1,322 @@
+/*!
+ * Bootstrap @VERSION
+ *
+ * Copyright 2011 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ * Date: @DATE
+ */
+
+// CSS Reset
+@import "reset.less";
+
+// Core variables and mixins
+@import "variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "mixins.less";
+
+// Grid system and page structure
+@import "scaffolding.less";
+
+// Styled patterns and elements
+@import "type.less";
+@import "forms.less";
+@import "tables.less";
+@import "patterns.less";
+
+/* GERAL */
+header#top{
+	width: 100%;
+	#gradient > .horizontal(@blueDark, @blue);
+
+	section#logo{		
+		padding: 2*@baseline 0 @baseline;
+		
+		a h1{
+			position: relative;
+			display: block;
+			text-indent: -999em;
+			overflow: hidden;
+			width: 263px;
+			height: 89px;
+			left: -30px;
+			background: url(../images/dublin_logo.png) no-repeat center;
+		}
+	}
+	
+	nav{
+		#gradient > .vertical(@blueLight, @blueLighter);
+		
+		ul.nav{
+			font-weight: bolder;
+			text-transform: uppercase;
+			font-size: 14px;
+			
+			li.current-menu-item a::after, a:hover::after{
+				content: "";
+				display: block;
+				bottom: -13px;
+				left: 50%;
+				height: 0;
+				margin-left: -13px;
+				border-left: 13px solid transparent;
+				border-right: 13px solid transparent;
+				border-top: 13px solid @blueLighter;
+				position: absolute;
+				z-index: 100;				
+			}
+			
+			a{
+				color: white;
+				padding: 15px 20px;
+				position: relative;
+			}
+		}
+		
+		form{
+			margin: 14px 50px 0 0;
+			
+			input{
+				float: left;
+				padding: 0 5px;
+				border-radius: 10px 0 0 10px;
+				width: 140px;
+			}
+			
+			#searchsubmit{
+				text-indent: -999em;
+				display: block;
+				width: 20px;
+				height: 20px;
+				overflow: hidden;
+				float: left;
+				background: transparent url(../images/search_button.png) no-repeat center;
+			}
+		}
+	}
+}
+
+#general{
+	position: relative;
+	
+	#gimmik{
+		position: absolute;
+		right: 80px;
+		bottom: -77px;
+	}
+}
+
+#main{
+	padding: 3*@baseline 0 2*@baseline;
+	color: @gray;
+	
+	.body-article{
+		margin-left: 20px;
+		
+		h1, h2{
+			color: @blue;
+		}
+	}
+	
+	aside.sidebar, article.home-video{
+		padding: 0 10px 10px;
+		background: @blueLighter;
+		overflow: hidden;
+		
+		h4{
+			color: white;
+		}
+		
+		.more-info{
+			padding: 10px;
+			background: white;
+			margin-bottom: 0.5*@baseline;
+		}
+	}
+	
+	aside.depoimentos{
+		margin-top: 3*@baseline;
+	}
+	
+	blockquote{
+		color: @blue;
+		border: none;
+		padding: 20px 40px;
+		overflow: hidden;
+		position: relative;
+		
+		p{
+			font-weight: bold;
+		}
+		
+		span{
+			float: right;
+			margin-top: @baseline;
+			text-align: right;
+			font-size: 11px;
+		}
+		
+		&::before, &::after{
+			display: block;
+			position: absolute;
+			font-weight: bolder;
+			font-size: 72px;
+			color: @blueLight;
+		}
+		
+		&::before{
+			content: "“";
+			top: 0;
+			left: 0;
+		}
+		
+		&::after{
+			content: "”";
+			bottom: 0;
+			right: 0;
+		}
+	}
+}
+
+#banner_container{
+	position: relative;
+	width: 805px;
+	
+	#banner_nav{
+		position: absolute;
+		right: 0;
+		top: 160px;
+		z-index: 10;
+		
+		a{
+			float: left;
+			margin-left: 5px;
+			display: block;
+			height: 10px;
+			width: 10px;
+			background: @grayLight;
+			text-indent: -999em;
+			overflow: hidden;
+			.border-radius(5px);
+			
+			&:hover{
+				background: @gray;
+			}
+			
+			&.activeSlide, &.activeSlide:hover{
+				background: white;
+			}
+		}
+	}
+}
+
+#banner_section{
+	margin-bottom: 2*@baseline;
+	height: 182px;
+}
+
+article.seguro{
+	position: relative;
+	width: 90%;
+	margin-top: 7*@baseline;
+	
+	img{
+		border: 4px solid @blueLighter;
+		position: absolute;
+		top: -62px;
+		right: -10px;
+		z-index: 15;
+	}
+	
+	h3{
+		padding-left: 10px;
+		height: 36px;
+		color: white;
+		font-weight: normal;
+		margin-bottom: 36px;
+		position: relative;
+		z-index: 5;
+		#gradient > .vertical(@blueLighter, @blueLight);
+	}
+}
+
+ul.media-grid{
+	margin-left: -10px;
+	position: relative;
+	left: 8px;
+	
+	a{
+		padding: 0;
+		margin: 5px;
+		.border-radius(0);
+	}
+}
+
+a.cotacao_link{
+	float: right;
+	color: white;
+	padding: 2px 5px;
+	background: @blueLight;
+}
+
+footer#footer{
+	border-top: 1.5*@baseline solid @blueLighter;
+	#gradient > .horizontal(@blueDark, @blue);
+	padding: 2*@baseline 0;
+	color: white;
+	
+	a{
+		color: @blueLighter;
+	}
+	
+	h4{
+		color: white;
+		font-weight: normal;
+		font-size: 14px;
+	}
+	
+	ul.nav_footer{
+		margin-left: 0;
+		
+		li{
+			list-style: none;
+			
+			a{
+				color: white;
+			}
+		}
+	}
+	
+	#cria_logo{
+		position: relative;
+		
+		&::after{
+			content: "";
+			display: block;
+			position: absolute;
+			width: 19px;
+			height: 30px;
+			right: -30px;
+			bottom: 0;
+			background: url(../images/cria.png) no-repeat center;
+		}
+	}
+}
+
+/* FORMULÁRIO */
+form{
+	.wpcf7-validation-errors{
+		padding: 6px !important;
+	}
+	span.wpcf7-not-valid-tip, .wpcf7-not-valid-tip:hover, .wpcf7-mail-sent-ok{
+		color: white !important;
+		padding: 6px;
+	}
+	span.wpcf7-not-valid-tip{
+		.gradientBar(#ee5f5b, #c43c35);
+	}
+	.wpcf7-mail-sent-ok{
+		.gradientBar(#62c462, #57a957);
+	}
+}

@@ -81,7 +81,7 @@ header#top{
 				float: left;
 				padding: 0 5px;
 				border-radius: 10px 0 0 10px;
-				width: 140px;
+				width: 130px;
 			}
 			
 			#searchsubmit{
@@ -238,6 +238,19 @@ article.seguro{
 		position: relative;
 		z-index: 5;
 		#gradient > .vertical(@blueLighter, @blueLight);
+	}
+	a.cotacao_link{
+		float: none;
+		display: block;
+		text-align: right;
+		background: #359646; /* Old browsers */
+		background: -moz-linear-gradient(left,  #359646 0%, #9bba64 76%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, right top, color-stop(0%,#359646), color-stop(76%,#9bba64)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(left,  #359646 0%,#9bba64 76%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(left,  #359646 0%,#9bba64 76%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(left,  #359646 0%,#9bba64 76%); /* IE10+ */
+		background: linear-gradient(to right,  #359646 0%,#9bba64 76%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#359646', endColorstr='#9bba64',GradientType=1 ); /* IE6-9 */
 	}
 }
 

@@ -24,7 +24,7 @@ get_header(); ?>
 						<?php if(has_post_thumbnail($post->ID)){ the_post_thumbnail(); } ?>
 						<h3><?php the_title(); ?></h3>
 						<?php the_content();?>
-						<p><a class="cotacao_link" href="http://www.icatuweb.com.br/target/target.htm?cliente=dublin" target="_blank">Simule aqui a construção da renda mensal que você pretende ter. &gt;&gt;</a></p>
+						<p><a class="cotacao_link" href="http://dublinseguros.com.br/simulador-de-renda/">Simule aqui a construção da renda mensal que você pretende ter. &gt;&gt;</a></p>
 						<p><a class="cotacao_link" href="http://www.icatuweb.com.br/target/target.htm?cliente=dublin" target="_blank">Simule aqui a construção de reserva que você quer formar. &gt;&gt;</a></p>
 					</article>
 				</article>
